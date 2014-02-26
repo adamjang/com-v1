@@ -1,0 +1,75 @@
+body{
+	background-color: $bg-color-inverse;
+	color: #FFF;
+}
+
+.container,
+.inner{
+	@extend %clearfix;
+	padding: $spacing;
+}
+
+
+.pull,
+.wrapper{
+	@extend %clearfix;
+}
+
+
+.content{
+	margin: 0 auto;
+	position: relative;
+	max-width: 980px;
+}
+
+.site-content{
+	background-color: $body-background;
+	color: $text-color;
+}
+
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+.divider--small{
+	background-color: $divider;
+	border: 0;
+	height: 1px;
+	margin:$spacing 0;
+	width: 10px;
+}
+
+.mobile-only{
+	display: none;
+}
+
+.mobile-hide{
+	display: block;
+}
+
+
+@media screen and (max-width: $mobile-down) {
+
+	.mobile-hide{
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width: $tablet-portrait-down) {
+	.mobile-only{
+		display: block;
+	}
+
+	.pull-left,
+	.pull-right{
+		float: none;
+	}
+
+
+}

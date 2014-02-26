@@ -1,0 +1,12 @@
+.overlay{
+	background-color: $bg-color-inverse;
+	display: none;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+}

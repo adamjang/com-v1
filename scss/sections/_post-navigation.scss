@@ -1,0 +1,42 @@
+.post-navigation{
+	border-top: 1px solid $border;
+	padding: 0 $spacing;
+
+	.nav-next,
+	.nav-previous{
+		width: 50%;
+
+		a{
+			color: $text-color;
+			display: block;
+			padding: $spacing 0;
+
+			&:hover{
+				color: $accent;
+			}
+		}
+
+	}
+
+	.nav-previous{
+		a{
+			border-right: 1px solid $border;
+		}
+	}
+
+	.nav-next{
+
+		a{
+			border-: 1px solid $border;	
+			margin-right: -1px;
+			text-align: right;
+		}
+	}
+
+}
+
+@media screen and (max-width: $tablet-portrait-down) {
+	.post-navigation{
+		display: none;
+	}
+}

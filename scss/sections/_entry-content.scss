@@ -1,0 +1,185 @@
+/* =Entry Content
+----------------------------------------------- */
+
+.entry-header{
+	padding-bottom: $spacing/2;
+
+	.entry-title{
+		color: $title-color;
+		font-weight: bold;
+		padding: $spacing*2 $spacing 0;
+	}
+
+	.entry-meta{
+		padding: 0 $spacing*2;
+
+		.project-meta{
+			padding: $spacing/4 0;
+			width: 100%;
+
+			ul{
+				font-size: 14px;
+				list-style: none;
+				margin: 0;
+				text-align: center;
+
+				li{
+					display: inline-block;
+					padding: $spacing/6 $spacing/2;
+
+
+					.project-meta-title{
+						display: block;
+						font-weight: 500;
+						text-align: left;
+					}
+
+				}
+			}
+
+			
+		}
+
+		.project-desc{
+			width: 100%;
+		}
+	}
+}
+
+.entry-content{
+
+	&.screenshot-wrap{
+		background-color: #d9d9d9;
+		padding: $spacing $spacing*2;
+
+		img{
+			margin-top: $spacing;
+			margin-bottom: $spacing;
+		}
+
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		color: $title-color;
+
+	}
+
+
+	p{
+		color: $text-color;
+		@extend .content;
+		max-width: 800px;
+		padding: 0 $spacing*2;
+		
+	}
+
+	img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	a{
+
+		&:hover{
+			border-bottom: 1px solid darket($accent, 20%);
+		}
+
+	}
+
+}
+
+@media screen and (min-width: $tablet-portrait-up){
+
+	.entry-header{
+
+		.entry-meta{
+
+			.project-meta{
+
+
+				&.has-excerpt{
+					float: left;
+					width: 25%;
+					
+					ul{
+						text-align: left;
+						
+						li{
+							display: block;
+							padding: $spacing/6 0;
+						}
+
+					}
+
+				}
+				
+			}
+
+			.project-desc{
+
+				&.has-excerpt{
+					float: right;
+					width: 75%;
+				}
+
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: $tablet-portrait-down){
+
+	.entry-header{
+
+		.entry-meta{
+			padding: 0 $spacing;
+
+			.project-meta{
+
+				ul{
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+	
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: $mobile-down){
+
+	.entry-header{
+
+		.entry-title{
+			padding-top: $spacing;
+		}
+
+		.entry-meta{
+			padding-left: 0;
+			padding-right: 0;
+
+
+			.project-desc{
+
+
+				&.has-excerpt{
+
+				}
+
+			}
+		}
+	}
+
+	.entry-content{
+		
+		&.screenshot-wrap{
+			padding-left: $spacing;
+			padding-right: $spacing;
+		}
+
+	}
+
+}

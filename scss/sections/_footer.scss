@@ -1,0 +1,50 @@
+.site-footer{
+	background-color: $bg-color-inverse;
+	color: $text-color-inverse;
+	@include font-size(1.4);
+	text-transform: uppercase;
+
+	a{
+		color: $text-color-inverse-links;
+		padding-left: $spacing;
+
+		&:hover{
+			color: $accent;
+		}
+	}
+
+	.site-copyright{
+		float: left;
+	}
+
+	.site-social-links{
+		float: right;
+	}
+}
+
+@media screen and (max-width: $mobile-down){
+	
+	.site-footer{
+		text-align: center;
+
+		a{
+			display: inline-block;
+			padding-top: $spacing/2;
+			padding-left: $spacing/2;
+			padding-right: $spacing/2;
+
+			&:hover{
+				color: $accent;
+			}
+		}
+
+		.site-copyright{
+			float: none;
+		}
+
+		.site-social-links{
+			float: none;
+		}
+	}
+
+}
